@@ -9,7 +9,7 @@ print("Lade Werkzeuge... Bitte warten!")
 
 # 1. Das "Schulbuch" (Unsere Trainingsdaten)
 # Je mehr solcher Paare du später hast, desto schlauer wird dein Modell!
-with open("datenbank.json", "r", encoding="utf-8") as f:
+with open("jack_datenbank.json", "r", encoding="utf-8") as f:
     daten = json.load(f)
 mein_schulbuch = Dataset.from_list(daten)
 
@@ -44,7 +44,7 @@ lora_einstellungen = LoraConfig(
 
 # 5. Wie sollen die Daten aussehen?
 def text_formatieren(beispiel):
-    return f"Frage: {beispiel['frage']}\nAntwort: {beispiel['antwort']}"
+    return f"Frage: {beispiel['instruction']}\nAntwort: {beispiel['output']}"
 
 # 6. Die Trainingsregeln (Der Motor)
 trainings_regeln = TrainingArguments(
