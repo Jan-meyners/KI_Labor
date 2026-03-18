@@ -4,9 +4,9 @@ import re
 
 # --- EINSTELLUNGEN ---
 INPUT_DATEI = "rohdaten.txt"
-OUTPUT_DATEI = "jack_datenbank.json"
+OUTPUT_DATEI = "jack_datenbank_2.json"
 ZIEL_ANZAHL = 2000
-CHUNK_GROESSE = 3000  
+CHUNK_GROESSE = 2800 
 MODELL = "llama3.2:3b"
 
 def ist_schrott(text_chunk):
